@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="/static/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
+    <script type=text/javascript> $(function() { $("#mybutton").click(function (event) { $.getJSON('/SomeFunction', { },
+    function(data) { }); return false; }); }); </script>
+    <style>
+        body {
+            overflow: hidden;
+            background-image: linear-gradient(to right bottom, #b2cede, #74a9d2, #3c82c5, #0459b4, #0c2d9a);
+
+        }
+
+        button {
+            color: #B2CEDE
+        }
+
+        <style>.dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        #categ{
+            width:28rem;
+            height:2.5 rem;
+        }
+    </style>
+    
+
+
+</head>
+
+
+<body>
+
+    <div class="main"
+        style="background-image: linear-gradient(to right bottom, #b2cede, #74a9d2, #3c82c5, #0459b4, #0c2d9a);">
+
+        <!-- Sign up form -->
+        <section class="signup">
+            <div class="container" style="align-items: center;">
+                <div class="signup-content">
+                    <div class="signup-form">
+                        <h2 class="form-title">New Registration</h2>
+                        <form action="{{ url_for('json') }}" method="POST" class="register-form" id="register-form">
+                            <div class="form-group">
+                                <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                                <input type="text" name="lname" id="name" placeholder="Your Name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="text"><i class="zmdi zmdi-email"></i></label>
+                                <input type="text" name="fname" id="fname" placeholder="Your ID" />
+                            </div>
+
+                            <div class="form-group" >
+                                <label for="categ">Choose:</label>
+                                <br><br>
+                                <select id="categ" name="categ">
+                                    <option value="Member">Member</option>
+                                    <option value="Maid">Maid</option>
+                                    <option value="Vendor">Vendor</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group form-button">
+                                <input type="submit" name="signup" id="signup" class="form-submit" value="Register" />
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
